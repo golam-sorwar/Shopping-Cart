@@ -20,9 +20,9 @@
             @foreach ($products as $product)
                 <div class="w-1/3 pl-3">
                     <div class="border rounded-lg shadow overflow-hidden mb-4">
-                        <img class="w-full" src="https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453_1280.jpg" alt="">
+                        <img class="w-full" src="https://picsum.photos/280/150?item={{ $product->id }}" alt="">
                         <div class="flex justify-between p-4 item-cennter">
-                            <div class="text-gray-700 mb-2 pt-2 pl-2 capitalize">{{ $product->name }} <span class="font-bold text-md">{{ $product->price }}$</span></div>
+                            <div class="text-gray-700 mb-2 pt-2 pl-2 capitalize">{{ $product->name }} - <span class="font-bold text-md">${{ $product->price }}</span></div>
                             <button type="submit" class="border border-green-400 hover:bg-green-500 px-4 py-2 rounded-full text-green-500 hover:text-white">+ Add</button>
                         </div>
                     </div>
