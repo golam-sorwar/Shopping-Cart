@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('cart');
+    return view('cart',[
+        'products' => App\Product::all()
+    ]);
 });
