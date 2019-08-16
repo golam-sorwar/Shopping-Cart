@@ -1,4 +1,5 @@
 <?php
+use App\Http\Livewire\CartProduct;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,6 +11,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Livewire::component('cart-product',CartProduct::class);
 
 Route::get('/', function () {
     return view('cart',[

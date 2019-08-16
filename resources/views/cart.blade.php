@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Shopping Cart</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -18,18 +19,11 @@
 
         <div class="pt-16 flex flex-wrap">
             @foreach ($products as $product)
-                <div class="w-1/3 pl-3">
-                    <div class="border rounded-lg shadow overflow-hidden mb-4">
-                        <img class="w-full" src="https://picsum.photos/280/150?item={{ $product->id }}" alt="">
-                        <div class="flex justify-between p-4 item-cennter">
-                            <div class="text-gray-700 mb-2 pt-2 pl-2 capitalize">{{ $product->name }} - <span class="font-bold text-md">${{ $product->price }}</span></div>
-                            <button type="submit" class="border border-green-400 hover:bg-green-500 px-4 py-2 rounded-full text-green-500 hover:text-white">+ Add</button>
-                        </div>
-                    </div>
-                </div>
+                @livewire('cart-product', $product)
             @endforeach            
         </div>
         
     </div>
+    @livewireAssets
 </body>
 </html>
