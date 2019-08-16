@@ -13,9 +13,16 @@ class CartProduct extends Component
 
     public function add()
     {
-        $cart_id=Cart::first();
+        $cart_id = Cart::first();
         CartPro::create(['cart_id' => $cart_id->id, 'product_id' => $this->id]);
         // CartPro::attach($this->id);
+    }
+
+    public function remove()
+    {
+        // Cart::first()->cartpros()->detach($this->id);
+        // CartPro::destroy(['cart_id' => Cart::first(), 'product_id' => $this->id]);
+        CartPro::where('product_id',$this->id)->delete();
     }
 
     public function mount($product)
@@ -27,8 +34,8 @@ class CartProduct extends Component
 
     public function render()
     {
-        return view('livewire.cart-product',[
-            'alreadyAdded' => CartPro::where('product_id',$this->id)->exists(),
+        return view('livewire.cart-product', [
+            'alreadyAdded' => CartPro::where('product_id', $this->id)->exists(),
         ]);
     }
 }

@@ -15,6 +15,7 @@ class LivewireManager
 
     protected $prefix = 'wire';
     protected $componentAliases = [];
+    protected $customComponentResolver;
     protected $middlewaresFilter;
     protected $container;
 
@@ -35,12 +36,24 @@ class LivewireManager
         $this->componentAliases[$alias] = $viewClass;
     }
 
+    public function componentResolver($callback)
+    {
+        $this->customComponentResolver = $callback;
+    }
+
     public function getComponentClass($alias)
     {
         $finder = app()->make(LivewireComponentsFinder::class);
 
-        $class = $this->componentAliases[$alias]
-            ?? $finder->find($alias);
+        $class = false;
+
+        if ($this->customComponentResolver) {
+            $class = call_user_func($this->customComponentResolver, $alias);
+        }
+
+        $class = $class ?: (
+            $this->componentAliases[$alias] ?? $finder->find($alias)
+        );
 
         throw_unless($class, new ComponentNotFoundException(
             "Unable to find component: [{$alias}]"
@@ -49,7 +62,7 @@ class LivewireManager
         return $class;
     }
 
-    public function activate($component)
+    public function activate($component, $id)
     {
         $componentClass = $this->getComponentClass($component);
 
@@ -57,7 +70,7 @@ class LivewireManager
             "Component [{$component}] class not found: [{$componentClass}]"
         ));
 
-        return new $componentClass;
+        return new $componentClass($id);
     }
 
     public function assets($options = null)
@@ -88,7 +101,9 @@ EOT;
 
     public function mount($name, ...$options)
     {
-        $instance = $this->activate($name);
+        $id = Str::random(20);
+
+        $instance = $this->activate($name, $id);
 
         $parameters = $this->resolveClassMethodDependencies(
             $options, $instance, 'mount'
@@ -97,7 +112,6 @@ EOT;
         $instance->mount(...array_values($parameters));
 
         $dom = $instance->output();
-        $id = Str::random(20);
         $properties = ComponentHydrator::dehydrate($instance);
         $events = $instance->getEventsBeingListenedFor();
         $children = $instance->getRenderedChildren();

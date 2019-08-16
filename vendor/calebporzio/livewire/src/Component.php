@@ -7,6 +7,9 @@ use BadMethodCallException;
 use Illuminate\Support\Str;
 use Illuminate\Support\MessageBag;
 use Illuminate\Support\ViewErrorBag;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Collection;
+use Livewire\Exceptions\CannotAddEloquentModelsAsPublicPropertyException;
 
 abstract class Component
 {
@@ -23,8 +26,9 @@ abstract class Component
         'mount', 'hydrate', 'updating', 'updated',
     ];
 
-    public function __construct()
+    public function __construct($id)
     {
+        $this->id = $id;
         $this->initializeTraits();
     }
 
@@ -59,17 +63,36 @@ abstract class Component
         throw_unless($view instanceof View,
             new \Exception('"render" method on ['.get_class($this).'] must return instance of ['.View::class.']'));
 
-        $dom = $view
+        return $view
             ->with([
                 'errors' => (new ViewErrorBag)->put('default', $errors ?: new MessageBag),
                 '_instance' => $this,
             ])
             // Automatically inject all public properties into the blade view.
-            ->with($this->getPublicPropertiesDefinedBySubClass())
+            ->with($this->getPublicDataFromComponent())
             ->render();
+    }
 
-        // Basic minification: strip newlines and return carraiges.
-        return str_replace(["\n", "\r"], '', $dom);
+    protected function getPublicDataFromComponent()
+    {
+        $data = $this->getPublicPropertiesDefinedBySubClass();
+
+        $this->makeSureThereAreNoEloquentModels($data);
+
+        return $this->castDataToJavaScriptSafeTypes($data);
+    }
+
+    public function makeSureThereAreNoEloquentModels($data)
+    {
+        array_walk($data, function ($value) {
+            throw_if($value instanceof Model || $value instanceof Collection,
+                new CannotAddEloquentModelsAsPublicPropertyException);
+        });
+    }
+
+    public function castDataToJavaScriptSafeTypes($data)
+    {
+        return json_decode(json_encode($data), true);
     }
 
     public function __call($method, $params)
