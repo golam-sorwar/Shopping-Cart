@@ -4,25 +4,27 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Cart;
+use App\CartProduct as AppCartProduct;
 use App\Product;
-use App\CartPro;
 
 class CartProduct extends Component
 {
-    public $id, $name, $price;
+    public $id;
+    public $name;
+    public $price;
 
     public function add()
     {
-        $cart_id = Cart::first();
-        CartPro::create(['cart_id' => $cart_id->id, 'product_id' => $this->id]);
-        // CartPro::attach($this->id);
+        // $cart_id = Cart::first();
+        // CartPro::create(['cart_id' => $cart_id->id, 'product_id' => $this->id]);
+        Cart::first()->products()->attach($this->id);
     }
 
     public function remove()
     {
         // Cart::first()->cartpros()->detach($this->id);
         // CartPro::destroy(['cart_id' => Cart::first(), 'product_id' => $this->id]);
-        CartPro::where('product_id',$this->id)->delete();
+        CartProduct::where('product_id', $this->id)->delete();
     }
 
     public function mount($product)
@@ -34,8 +36,10 @@ class CartProduct extends Component
 
     public function render()
     {
-        return view('livewire.cart-product', [
-            'alreadyAdded' => CartPro::where('product_id', $this->id)->exists(),
-        ]);
+        return view('livewire.cart-product'
+        , [
+            'alreadyAdded' => AppCartProduct::where('product_id',$this->id)->exists(),
+        ]
+    );
     }
 }

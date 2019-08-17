@@ -73,9 +73,10 @@ class LivewireManager
         return new $componentClass($id);
     }
 
-    public function assets($options = null)
+    public function assets($options = [])
     {
-        $appUrl = $this->appUrlOrRoot();
+        $appUrl = rtrim($options['base_url'] ?? '', '/');
+
         $options = $options ? json_encode($options) : '';
 
         $manifest = json_decode(file_get_contents(__DIR__.'/../dist/mix-manifest.json'), true);
@@ -86,7 +87,7 @@ class LivewireManager
 
         return <<<EOT
 <!-- Livewire Assets-->
-<style>[wire\:loading] { display: none; }</style>
+<style>[wire\:loading] { display: none; } [wire\:dirty]:not(textarea):not(input):not(select) { display: none; }</style>
 <script src="{$fullAssetPath}"></script>
 <script>
     window.livewire = new Livewire({$options});
@@ -106,7 +107,9 @@ EOT;
         $instance = $this->activate($name, $id);
 
         $parameters = $this->resolveClassMethodDependencies(
-            $options, $instance, 'mount'
+            $options,
+            $instance,
+            'mount'
         );
 
         $instance->mount(...array_values($parameters));
@@ -158,14 +161,5 @@ EOT;
     public function test($name, ...$params)
     {
         return new TestableLivewire($name, $this->prefix, $params);
-    }
-
-    public function appUrlOrRoot()
-    {
-        $defaultAppUrlInDotEnv = 'http://localhost';
-
-        return config('app.url') !== $defaultAppUrlInDotEnv
-            ? rtrim(config('app.url'), '/')
-            : '';
     }
 }

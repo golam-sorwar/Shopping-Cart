@@ -64,17 +64,17 @@
     },
     {
         "name": "calebporzio/livewire",
-        "version": "v0.2.5",
-        "version_normalized": "0.2.5.0",
+        "version": "v0.2.6",
+        "version_normalized": "0.2.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/calebporzio/livewire.git",
-            "reference": "0355f5859d3620e400e94c180a4077d79a0fb761"
+            "reference": "8525ee54217268c8d2f1a7761c5b47325675e266"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/calebporzio/livewire/zipball/0355f5859d3620e400e94c180a4077d79a0fb761",
-            "reference": "0355f5859d3620e400e94c180a4077d79a0fb761",
+            "url": "https://api.github.com/repos/calebporzio/livewire/zipball/8525ee54217268c8d2f1a7761c5b47325675e266",
+            "reference": "8525ee54217268c8d2f1a7761c5b47325675e266",
             "shasum": ""
         },
         "require": {
@@ -87,7 +87,7 @@
             "phpunit/phpunit": "^7.5",
             "psy/psysh": "@stable"
         },
-        "time": "2019-08-15T17:30:57+00:00",
+        "time": "2019-08-16T16:04:28+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -4694,8 +4694,8 @@
         "authors": [
             {
                 "name": "Arne Blankerts",
-                "email": "arne@blankerts.de",
-                "role": "Developer"
+                "role": "Developer",
+                "email": "arne@blankerts.de"
             }
         ],
         "description": "A small library for converting tokenized PHP source code into XML and potentially other formats"
