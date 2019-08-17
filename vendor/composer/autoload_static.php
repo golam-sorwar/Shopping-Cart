@@ -394,6 +394,7 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         'App\\Cart' => __DIR__ . '/../..' . '/app/Cart.php',
         'App\\CartProduct' => __DIR__ . '/../..' . '/app/CartProduct.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Events\\ProductAddedToCart' => __DIR__ . '/../..' . '/app/Events/ProductAddedToCart.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',

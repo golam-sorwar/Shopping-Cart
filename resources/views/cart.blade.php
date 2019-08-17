@@ -9,18 +9,30 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mx-auto px-32">
-        <div class="absolute p-4 right-0">
-            @livewire('cart-counter')
-        </div>
+    <div id="app">
+        <div class="container mx-auto px-32" >
+            <div class="absolute p-4 right-0">
+                @livewire('cart-counter')
+            </div>
 
-        <div class="pt-16 flex flex-wrap">
-            @foreach ($products as $product)
-                @livewire('cart-product', $product)
-            @endforeach            
+            <div class="pt-16 flex flex-wrap">
+                @foreach ($products as $product)
+                    @livewire('cart-product', $product)
+                @endforeach            
+            </div>
+            
         </div>
-        
     </div>
+    
     @livewireAssets
+    <script src="{{ asset('js/app.js') }}" ></script>
+    <script>
+        window.addEventListener('DOMContentLoaded',function() {
+            Echo.channel('cart')
+                .listen('ProductAddedToCart', (e) => {
+                console.log('Its work');
+            });
+        })
+    </script>
 </body>
 </html>

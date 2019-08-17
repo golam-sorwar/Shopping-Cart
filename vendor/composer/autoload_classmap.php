@@ -9,6 +9,7 @@ return array(
     'App\\Cart' => $baseDir . '/app/Cart.php',
     'App\\CartProduct' => $baseDir . '/app/CartProduct.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Events\\ProductAddedToCart' => $baseDir . '/app/Events/ProductAddedToCart.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
