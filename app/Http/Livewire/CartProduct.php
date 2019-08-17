@@ -22,9 +22,8 @@ class CartProduct extends Component
 
     public function remove()
     {
-        // Cart::first()->cartpros()->detach($this->id);
-        // CartPro::destroy(['cart_id' => Cart::first(), 'product_id' => $this->id]);
-        CartProduct::where('product_id', $this->id)->delete();
+        // CartProduct::where('product_id', $this->id)->delete();
+        Cart::first()->products()->detach($this->id);
     }
 
     public function mount($product)
