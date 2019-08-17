@@ -12,7 +12,8 @@
         "calebporzio/livewire": "^0.2.5",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "pusher/pusher-php-server": "~4.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
