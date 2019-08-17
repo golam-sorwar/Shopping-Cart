@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Livewire\CartCounter;
 use App\Http\Livewire\CartProduct;
 
 /*
@@ -13,6 +15,7 @@ use App\Http\Livewire\CartProduct;
 */
 
 Livewire::component('cart-product',CartProduct::class);
+Route::livewire('cart-counter',CartCounter::class); // Livewire::component or Route::livewire both are same
 
 Route::get('/', function () {
     return view('cart',[
