@@ -36,9 +36,8 @@ class CartProduct extends Component
 
     public function render()
     {
-        return view('livewire.cart-product'
-        , [
-            'alreadyAdded' => AppCartProduct::where('product_id',$this->id)->exists(),
+        return view('livewire.cart-product', [
+            'alreadyAdded' => Cart::first()->products()->whereId($this->id)->exists(),
         ]
     );
     }
