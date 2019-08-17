@@ -8,8 +8,8 @@ use Livewire\Component;
 class CartCounter extends Component
 {
     protected $listeners = [
-        'productAdded' => 'noop',
-        'productRemoved' => 'noop'
+        'productUpdated' => 'noop',
+        // 'productRemoved' => 'noop'
     ];
 
     public function noop()

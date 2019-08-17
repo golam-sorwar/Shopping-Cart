@@ -10,7 +10,7 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class ProductAddedToCart implements ShouldBroadcast
+class ProductUpdatedInCart implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -19,9 +19,11 @@ class ProductAddedToCart implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct()
+    public $productId;
+    
+    public function __construct($productId)
     {
-        //
+        $this->productId = $productId;
     }
 
     /**

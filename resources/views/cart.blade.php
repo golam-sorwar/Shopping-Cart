@@ -14,8 +14,13 @@
             <div class="absolute p-4 right-0">
                 @livewire('cart-counter')
             </div>
+            <div class=" p-4 flex justify-center">
+                <div class="w-auto">
+                    <input class="bg-green-100 appearance-none border-2 border-purple-700 rounded-full w-full py-2 px-32 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" placeholder="Search ...." type="text">
+                </div>
+            </div>
 
-            <div class="pt-16 flex flex-wrap">
+            <div class="pt-12 flex flex-wrap">
                 @foreach ($products as $product)
                     @livewire('cart-product', $product)
                 @endforeach            
@@ -29,8 +34,10 @@
     <script>
         window.addEventListener('DOMContentLoaded',function() {
             Echo.channel('cart')
-                .listen('ProductAddedToCart', (e) => {
-                console.log('Its work');
+                .listen('ProductUpdatedInCart', (e) => {
+                // console.log('Its work');
+                window.livewire.emit('productUpdated');
+                window.livewire.emit('productUpdated:'+e.productId);
             });
         })
     </script>
