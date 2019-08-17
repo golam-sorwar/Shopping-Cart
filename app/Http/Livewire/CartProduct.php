@@ -18,12 +18,14 @@ class CartProduct extends Component
         // $cart_id = Cart::first();
         // CartPro::create(['cart_id' => $cart_id->id, 'product_id' => $this->id]);
         Cart::first()->products()->attach($this->id);
+        $this->emit('productAdded');
     }
 
     public function remove()
     {
         // CartProduct::where('product_id', $this->id)->delete();
         Cart::first()->products()->detach($this->id);
+        $this->emit('productRemoved');
     }
 
     public function mount($product)
