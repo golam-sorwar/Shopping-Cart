@@ -13,10 +13,11 @@ class CartProduct extends Component
     public $id;
     public $name;
     public $price;
+    public $search;
 
     public function listeners()
     {
-        return ['productUpdated:'.$this->id => '$refresh'];
+        return ['productUpdated:' . $this->id => '$refresh'];
     }
 
     public function add()
@@ -45,9 +46,11 @@ class CartProduct extends Component
 
     public function render()
     {
-        return view('livewire.cart-product', [
-            'alreadyAdded' => Cart::first()->products()->whereId($this->id)->exists(),
-        ]
-    );
+        return view(
+            'livewire.cart-product',
+            [
+                'alreadyAdded' => Cart::first()->products()->whereId($this->id)->exists(),
+            ]
+        );
     }
 }

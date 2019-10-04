@@ -2,9 +2,9 @@
 
 namespace Laravel\Scout\Engines;
 
-use Laravel\Scout\Builder;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Algolia\AlgoliaSearch\SearchClient as Algolia;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Builder;
 
 class AlgoliaEngine extends Engine
 {
@@ -227,5 +227,17 @@ class AlgoliaEngine extends Engine
     protected function usesSoftDelete($model)
     {
         return in_array(SoftDeletes::class, class_uses_recursive($model));
+    }
+
+    /**
+     * Dynamically call the Algolia client instance.
+     *
+     * @param  string  $method
+     * @param  array   $parameters
+     * @return mixed
+     */
+    public function __call($method, $parameters)
+    {
+        return $this->algolia->$method(...$parameters);
     }
 }

@@ -16,19 +16,22 @@
             </div>
             <div class=" p-4 flex justify-center">
                 <div class="w-auto">
-                    <input class="bg-green-100 appearance-none border-2 border-purple-700 rounded-full w-full py-2 px-32 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" placeholder="Search ...." type="text">
+                    {{-- <form action="{{ url('/') }}" method="post">
+                        @csrf --}}
+                        <input wire:keydown.enter="search" class="bg-green-100 appearance-none border-2 border-purple-700 rounded-full w-full py-2 px-32 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" placeholder="Search ...." >
+                    {{-- </form> --}}
                 </div>
             </div>
 
             <div class="pt-12 flex flex-wrap">
                 @foreach ($products as $product)
                     @livewire('cart-product', $product)
-                @endforeach            
+                @endforeach
             </div>
-            
+
         </div>
     </div>
-    
+
     @livewireAssets
     <script src="{{ asset('js/app.js') }}" ></script>
     <script>

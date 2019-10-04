@@ -275,6 +275,21 @@ was compiled where `PHP_INT_SIZE` equals `4` instead of `8` (i.e. Linux on i386)
         * `crypto_stream()`
         * `crypto_stream_xor()`
     * Other utilities (e.g. `crypto_*_keypair()`)
+        * `add()`
+        * `base642bin()`
+        * `bin2base64()`
+        * `bin2hex()`
+        * `hex2bin()`
+        * `crypto_kdf_derive_from_key()`
+        * `crypto_kx_client_session_keys()`
+        * `crypto_kx_server_session_keys()`
+        * `crypto_secretstream_xchacha20poly1305_init_push()`
+        * `crypto_secretstream_xchacha20poly1305_push()`
+        * `crypto_secretstream_xchacha20poly1305_init_pull()`
+        * `crypto_secretstream_xchacha20poly1305_pull()`
+        * `crypto_secretstream_xchacha20poly1305_rekey()`
+        * `pad()`
+        * `unpad()`
 
 ### Cryptography Primitives Provided
 
@@ -308,3 +323,14 @@ was compiled where `PHP_INT_SIZE` equals `4` instead of `8` (i.e. Linux on i386)
   `ParagonIE_Sodium_Compat::crypto_pwhash_is_available()`, which returns a
    boolean value (`TRUE` or `FALSE`).
 
+
+### PHPCompatibility Rulset
+
+For sodium_compat users and that utilize [`PHPCompatibility`](https://github.com/PHPCompatibility/PHPCompatibility)
+in their CI process, there is now a custom ruleset available which can be used
+to prevent false positives being thrown by `PHPCompatibility` for the native
+PHP functionality being polyfilled by this repo.
+
+You can find the repo for the `PHPCompatibilityParagonieSodiumCompat` ruleset
+here [on Github](https://github.com/PHPCompatibility/PHPCompatibilityParagonie) 
+and [on Packagist](https://packagist.org/packages/phpcompatibility/phpcompatibility-paragonie).

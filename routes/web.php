@@ -22,3 +22,11 @@ Route::get('/', function () {
         'products' => App\Product::all()
     ]);
 });
+
+/*Route::post('/', function () {
+    $query = request()->search; // <-- Change the query for testing.
+
+    $products = App\Product::search($query)->get();
+
+    return view('cart', compact('products'));
+});*/

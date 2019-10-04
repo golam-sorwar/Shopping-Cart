@@ -1,0 +1,42 @@
+{
+    "name": "livewire/livewire",
+    "description": "Build and test rich client-side functionality: with only backend code.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Caleb Porzio",
+            "email": "calebporzio@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.7|^6.0",
+        "illuminate/validation": "^5.7|^6.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Livewire\\LivewireServiceProvider"
+            ],
+            "aliases": {
+                "Livewire": "Livewire\\Livewire"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Livewire\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "App\\": "vendor/orchestra/testbench-core/laravel/app"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "laravel/framework": "^5.7|^6.0",
+        "orchestra/testbench": "~3.0",
+        "psy/psysh": "@stable"
+    }
+}
