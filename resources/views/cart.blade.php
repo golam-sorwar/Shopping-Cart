@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Shopping Cart</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    @livewireAssets
 </head>
 <body>
     <div id="app">
@@ -32,7 +33,6 @@
         </div>
     </div>
 
-    @livewireAssets
     <script src="{{ asset('js/app.js') }}" ></script>
     <script>
         window.addEventListener('DOMContentLoaded',function() {

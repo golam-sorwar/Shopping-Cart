@@ -3,12 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
+use App\Cart;
 
 class Product extends Model
 {
-    use Searchable;
-
     protected $table = 'products';
 
     protected $fillable = ['name', 'price'];

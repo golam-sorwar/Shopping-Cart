@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
+class ComposerStaticInitaa4d92a1e0e482e2d71b3f141681c024
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -15,8 +15,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '979dffec6fa5205cabd2c2cd1e9e6b3a' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/functions.php',
-        '6783aef8c489bbc166eee2536fe605d5' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/functions.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -71,7 +69,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         ),
         'R' => 
         array (
-            'Riimu\\Kit\\PHPEncoder\\' => 21,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -80,7 +77,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
             'Psy\\' => 4,
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
-            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
             'Prophecy\\' => 9,
             'PhpParser\\' => 10,
@@ -142,8 +138,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         'A' => 
         array (
             'App\\' => 4,
-            'Algolia\\ScoutExtended\\' => 22,
-            'Algolia\\AlgoliaSearch\\' => 22,
         ),
     );
 
@@ -258,10 +252,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Riimu\\Kit\\PHPEncoder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/riimu/kit-phpencoder/src',
-        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -281,10 +271,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Container\\' => 
         array (
@@ -386,14 +372,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
-        'Algolia\\ScoutExtended\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/algolia/scout-extended/src',
-        ),
-        'Algolia\\AlgoliaSearch\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src',
-        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -418,107 +396,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
     );
 
     public static $classMap = array (
-        'Algolia\\AlgoliaSearch\\AccountClient' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AccountClient.php',
-        'Algolia\\AlgoliaSearch\\Algolia' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Algolia.php',
-        'Algolia\\AlgoliaSearch\\AnalyticsClient' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/AnalyticsClient.php',
-        'Algolia\\AlgoliaSearch\\Cache\\FileCacheDriver' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Cache/FileCacheDriver.php',
-        'Algolia\\AlgoliaSearch\\Cache\\NullCacheDriver' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Cache/NullCacheDriver.php',
-        'Algolia\\AlgoliaSearch\\Config\\AbstractConfig' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Config/AbstractConfig.php',
-        'Algolia\\AlgoliaSearch\\Config\\AnalyticsConfig' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Config/AnalyticsConfig.php',
-        'Algolia\\AlgoliaSearch\\Config\\InsightsConfig' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Config/InsightsConfig.php',
-        'Algolia\\AlgoliaSearch\\Config\\PlacesConfig' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Config/PlacesConfig.php',
-        'Algolia\\AlgoliaSearch\\Config\\SearchConfig' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Config/SearchConfig.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\AlgoliaException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/AlgoliaException.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\BadRequestException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/BadRequestException.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\CannotWaitException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/CannotWaitException.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\MissingObjectId' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/MissingObjectId.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\NotFoundException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/NotFoundException.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\ObjectNotFoundException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/ObjectNotFoundException.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\RequestException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/RequestException.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\RetriableException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/RetriableException.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\UnreachableException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/UnreachableException.php',
-        'Algolia\\AlgoliaSearch\\Exceptions\\ValidUntilNotFoundException' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Exceptions/ValidUntilNotFoundException.php',
-        'Algolia\\AlgoliaSearch\\Http\\Guzzle6HttpClient' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Guzzle6HttpClient.php',
-        'Algolia\\AlgoliaSearch\\Http\\HttpClientInterface' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/HttpClientInterface.php',
-        'Algolia\\AlgoliaSearch\\Http\\Php53HttpClient' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Php53HttpClient.php',
-        'Algolia\\AlgoliaSearch\\Http\\Psr7\\BufferStream' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/BufferStream.php',
-        'Algolia\\AlgoliaSearch\\Http\\Psr7\\PumpStream' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/PumpStream.php',
-        'Algolia\\AlgoliaSearch\\Http\\Psr7\\Request' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/Request.php',
-        'Algolia\\AlgoliaSearch\\Http\\Psr7\\Response' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/Response.php',
-        'Algolia\\AlgoliaSearch\\Http\\Psr7\\Stream' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/Stream.php',
-        'Algolia\\AlgoliaSearch\\Http\\Psr7\\Uri' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/Uri.php',
-        'Algolia\\AlgoliaSearch\\Http\\Psr7\\UriResolver' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Http/Psr7/UriResolver.php',
-        'Algolia\\AlgoliaSearch\\InsightsClient' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/InsightsClient.php',
-        'Algolia\\AlgoliaSearch\\Insights\\UserInsightsClient' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Insights/UserInsightsClient.php',
-        'Algolia\\AlgoliaSearch\\Iterators\\AbstractAlgoliaIterator' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Iterators/AbstractAlgoliaIterator.php',
-        'Algolia\\AlgoliaSearch\\Iterators\\ObjectIterator' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Iterators/ObjectIterator.php',
-        'Algolia\\AlgoliaSearch\\Iterators\\RuleIterator' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Iterators/RuleIterator.php',
-        'Algolia\\AlgoliaSearch\\Iterators\\SynonymIterator' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Iterators/SynonymIterator.php',
-        'Algolia\\AlgoliaSearch\\Log\\DebugLogger' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Log/DebugLogger.php',
-        'Algolia\\AlgoliaSearch\\PlacesClient' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/PlacesClient.php',
-        'Algolia\\AlgoliaSearch\\RequestOptions\\RequestOptions' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/RequestOptions/RequestOptions.php',
-        'Algolia\\AlgoliaSearch\\RequestOptions\\RequestOptionsFactory' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/RequestOptions/RequestOptionsFactory.php',
-        'Algolia\\AlgoliaSearch\\Response\\AbstractResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/AbstractResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\AddApiKeyResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/AddApiKeyResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\BatchIndexingResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/BatchIndexingResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\DeleteApiKeyResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/DeleteApiKeyResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\IndexingResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/IndexingResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\MultiResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/MultiResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\MultipleIndexBatchIndexingResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/MultipleIndexBatchIndexingResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\NullResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/NullResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\RestoreApiKeyResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/RestoreApiKeyResponse.php',
-        'Algolia\\AlgoliaSearch\\Response\\UpdateApiKeyResponse' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Response/UpdateApiKeyResponse.php',
-        'Algolia\\AlgoliaSearch\\RetryStrategy\\ApiWrapper' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/RetryStrategy/ApiWrapper.php',
-        'Algolia\\AlgoliaSearch\\RetryStrategy\\ApiWrapperInterface' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/RetryStrategy/ApiWrapperInterface.php',
-        'Algolia\\AlgoliaSearch\\RetryStrategy\\ClusterHosts' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/RetryStrategy/ClusterHosts.php',
-        'Algolia\\AlgoliaSearch\\RetryStrategy\\Host' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/RetryStrategy/Host.php',
-        'Algolia\\AlgoliaSearch\\RetryStrategy\\HostCollection' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/RetryStrategy/HostCollection.php',
-        'Algolia\\AlgoliaSearch\\SearchClient' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/SearchClient.php',
-        'Algolia\\AlgoliaSearch\\SearchIndex' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/SearchIndex.php',
-        'Algolia\\AlgoliaSearch\\Support\\Helpers' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Support/Helpers.php',
-        'Algolia\\AlgoliaSearch\\Support\\UserAgent' => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src/Support/UserAgent.php',
-        'Algolia\\ScoutExtended\\Algolia' => __DIR__ . '/..' . '/algolia/scout-extended/src/Algolia.php',
-        'Algolia\\ScoutExtended\\Builder' => __DIR__ . '/..' . '/algolia/scout-extended/src/Builder.php',
-        'Algolia\\ScoutExtended\\Console\\Commands\\FlushCommand' => __DIR__ . '/..' . '/algolia/scout-extended/src/Console/Commands/FlushCommand.php',
-        'Algolia\\ScoutExtended\\Console\\Commands\\ImportCommand' => __DIR__ . '/..' . '/algolia/scout-extended/src/Console/Commands/ImportCommand.php',
-        'Algolia\\ScoutExtended\\Console\\Commands\\MakeAggregatorCommand' => __DIR__ . '/..' . '/algolia/scout-extended/src/Console/Commands/MakeAggregatorCommand.php',
-        'Algolia\\ScoutExtended\\Console\\Commands\\OptimizeCommand' => __DIR__ . '/..' . '/algolia/scout-extended/src/Console/Commands/OptimizeCommand.php',
-        'Algolia\\ScoutExtended\\Console\\Commands\\ReImportCommand' => __DIR__ . '/..' . '/algolia/scout-extended/src/Console/Commands/ReImportCommand.php',
-        'Algolia\\ScoutExtended\\Console\\Commands\\StatusCommand' => __DIR__ . '/..' . '/algolia/scout-extended/src/Console/Commands/StatusCommand.php',
-        'Algolia\\ScoutExtended\\Console\\Commands\\SyncCommand' => __DIR__ . '/..' . '/algolia/scout-extended/src/Console/Commands/SyncCommand.php',
-        'Algolia\\ScoutExtended\\Contracts\\SearchableCountableContract' => __DIR__ . '/..' . '/algolia/scout-extended/src/Contracts/SearchableCountableContract.php',
-        'Algolia\\ScoutExtended\\Contracts\\SplitterContract' => __DIR__ . '/..' . '/algolia/scout-extended/src/Contracts/SplitterContract.php',
-        'Algolia\\ScoutExtended\\Contracts\\TransformerContract' => __DIR__ . '/..' . '/algolia/scout-extended/src/Contracts/TransformerContract.php',
-        'Algolia\\ScoutExtended\\Engines\\AlgoliaEngine' => __DIR__ . '/..' . '/algolia/scout-extended/src/Engines/AlgoliaEngine.php',
-        'Algolia\\ScoutExtended\\Exceptions\\ModelNotDefinedInAggregatorException' => __DIR__ . '/..' . '/algolia/scout-extended/src/Exceptions/ModelNotDefinedInAggregatorException.php',
-        'Algolia\\ScoutExtended\\Exceptions\\ModelNotFoundException' => __DIR__ . '/..' . '/algolia/scout-extended/src/Exceptions/ModelNotFoundException.php',
-        'Algolia\\ScoutExtended\\Exceptions\\SettingsNotFound' => __DIR__ . '/..' . '/algolia/scout-extended/src/Exceptions/SettingsNotFound.php',
-        'Algolia\\ScoutExtended\\Exceptions\\ShouldReimportSearchableException' => __DIR__ . '/..' . '/algolia/scout-extended/src/Exceptions/ShouldReimportSearchableException.php',
-        'Algolia\\ScoutExtended\\Facades\\Algolia' => __DIR__ . '/..' . '/algolia/scout-extended/src/Facades/Algolia.php',
-        'Algolia\\ScoutExtended\\Helpers\\SearchableFinder' => __DIR__ . '/..' . '/algolia/scout-extended/src/Helpers/SearchableFinder.php',
-        'Algolia\\ScoutExtended\\Jobs\\DeleteJob' => __DIR__ . '/..' . '/algolia/scout-extended/src/Jobs/DeleteJob.php',
-        'Algolia\\ScoutExtended\\Jobs\\UpdateJob' => __DIR__ . '/..' . '/algolia/scout-extended/src/Jobs/UpdateJob.php',
-        'Algolia\\ScoutExtended\\Managers\\EngineManager' => __DIR__ . '/..' . '/algolia/scout-extended/src/Managers/EngineManager.php',
-        'Algolia\\ScoutExtended\\Repositories\\ApiKeysRepository' => __DIR__ . '/..' . '/algolia/scout-extended/src/Repositories/ApiKeysRepository.php',
-        'Algolia\\ScoutExtended\\Repositories\\LocalSettingsRepository' => __DIR__ . '/..' . '/algolia/scout-extended/src/Repositories/LocalSettingsRepository.php',
-        'Algolia\\ScoutExtended\\Repositories\\RemoteSettingsRepository' => __DIR__ . '/..' . '/algolia/scout-extended/src/Repositories/RemoteSettingsRepository.php',
-        'Algolia\\ScoutExtended\\Repositories\\UserDataRepository' => __DIR__ . '/..' . '/algolia/scout-extended/src/Repositories/UserDataRepository.php',
-        'Algolia\\ScoutExtended\\ScoutExtendedServiceProvider' => __DIR__ . '/..' . '/algolia/scout-extended/src/ScoutExtendedServiceProvider.php',
-        'Algolia\\ScoutExtended\\Searchable\\Aggregator' => __DIR__ . '/..' . '/algolia/scout-extended/src/Searchable/Aggregator.php',
-        'Algolia\\ScoutExtended\\Searchable\\AggregatorCollection' => __DIR__ . '/..' . '/algolia/scout-extended/src/Searchable/AggregatorCollection.php',
-        'Algolia\\ScoutExtended\\Searchable\\AggregatorObserver' => __DIR__ . '/..' . '/algolia/scout-extended/src/Searchable/AggregatorObserver.php',
-        'Algolia\\ScoutExtended\\Searchable\\ModelsResolver' => __DIR__ . '/..' . '/algolia/scout-extended/src/Searchable/ModelsResolver.php',
-        'Algolia\\ScoutExtended\\Searchable\\ObjectIdEncrypter' => __DIR__ . '/..' . '/algolia/scout-extended/src/Searchable/ObjectIdEncrypter.php',
-        'Algolia\\ScoutExtended\\Searchable\\RecordsCounter' => __DIR__ . '/..' . '/algolia/scout-extended/src/Searchable/RecordsCounter.php',
-        'Algolia\\ScoutExtended\\Settings\\Compiler' => __DIR__ . '/..' . '/algolia/scout-extended/src/Settings/Compiler.php',
-        'Algolia\\ScoutExtended\\Settings\\Encrypter' => __DIR__ . '/..' . '/algolia/scout-extended/src/Settings/Encrypter.php',
-        'Algolia\\ScoutExtended\\Settings\\LocalFactory' => __DIR__ . '/..' . '/algolia/scout-extended/src/Settings/LocalFactory.php',
-        'Algolia\\ScoutExtended\\Settings\\Settings' => __DIR__ . '/..' . '/algolia/scout-extended/src/Settings/Settings.php',
-        'Algolia\\ScoutExtended\\Settings\\Status' => __DIR__ . '/..' . '/algolia/scout-extended/src/Settings/Status.php',
-        'Algolia\\ScoutExtended\\Settings\\Synchronizer' => __DIR__ . '/..' . '/algolia/scout-extended/src/Settings/Synchronizer.php',
-        'Algolia\\ScoutExtended\\Splitters\\HtmlSplitter' => __DIR__ . '/..' . '/algolia/scout-extended/src/Splitters/HtmlSplitter.php',
-        'Algolia\\ScoutExtended\\Transformers\\ConvertDatesToTimestamps' => __DIR__ . '/..' . '/algolia/scout-extended/src/Transformers/ConvertDatesToTimestamps.php',
-        'Algolia\\ScoutExtended\\Transformers\\ConvertNumericStringsToNumbers' => __DIR__ . '/..' . '/algolia/scout-extended/src/Transformers/ConvertNumericStringsToNumbers.php',
         'App\\Cart' => __DIR__ . '/../..' . '/app/Cart.php',
         'App\\CartProduct' => __DIR__ . '/../..' . '/app/CartProduct.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -3150,13 +3027,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
         'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
         'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',
-        'Psr\\Http\\Message\\MessageInterface' => __DIR__ . '/..' . '/psr/http-message/src/MessageInterface.php',
-        'Psr\\Http\\Message\\RequestInterface' => __DIR__ . '/..' . '/psr/http-message/src/RequestInterface.php',
-        'Psr\\Http\\Message\\ResponseInterface' => __DIR__ . '/..' . '/psr/http-message/src/ResponseInterface.php',
-        'Psr\\Http\\Message\\ServerRequestInterface' => __DIR__ . '/..' . '/psr/http-message/src/ServerRequestInterface.php',
-        'Psr\\Http\\Message\\StreamInterface' => __DIR__ . '/..' . '/psr/http-message/src/StreamInterface.php',
-        'Psr\\Http\\Message\\UploadedFileInterface' => __DIR__ . '/..' . '/psr/http-message/src/UploadedFileInterface.php',
-        'Psr\\Http\\Message\\UriInterface' => __DIR__ . '/..' . '/psr/http-message/src/UriInterface.php',
         'Psr\\Log\\AbstractLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/AbstractLogger.php',
         'Psr\\Log\\InvalidArgumentException' => __DIR__ . '/..' . '/psr/log/Psr/Log/InvalidArgumentException.php',
         'Psr\\Log\\LogLevel' => __DIR__ . '/..' . '/psr/log/Psr/Log/LogLevel.php',
@@ -3360,17 +3230,6 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\ArrayEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/ArrayEncoder.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\BooleanEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/BooleanEncoder.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\Encoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/Encoder.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\FloatEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/FloatEncoder.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\GMPEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/GMPEncoder.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\IntegerEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/IntegerEncoder.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\NullEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/NullEncoder.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\ObjectEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/ObjectEncoder.php',
-        'Riimu\\Kit\\PHPEncoder\\Encoder\\StringEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/Encoder/StringEncoder.php',
-        'Riimu\\Kit\\PHPEncoder\\InvalidOptionException' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/InvalidOptionException.php',
-        'Riimu\\Kit\\PHPEncoder\\PHPEncoder' => __DIR__ . '/..' . '/riimu/kit-phpencoder/src/PHPEncoder.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -4267,10 +4126,10 @@ class ComposerStaticInit51352b03cd425e50ad415e41bbcbae89
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit51352b03cd425e50ad415e41bbcbae89::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit51352b03cd425e50ad415e41bbcbae89::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit51352b03cd425e50ad415e41bbcbae89::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit51352b03cd425e50ad415e41bbcbae89::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitaa4d92a1e0e482e2d71b3f141681c024::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitaa4d92a1e0e482e2d71b3f141681c024::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitaa4d92a1e0e482e2d71b3f141681c024::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitaa4d92a1e0e482e2d71b3f141681c024::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -15,18 +15,10 @@ use App\Http\Livewire\CartProduct;
 */
 
 Livewire::component('cart-product',CartProduct::class);
-Livewire::component('cart-counter',CartCounter::class); // Livewire::component or Route::livewire both are same
+Livewire::component('cart-counter',CartCounter::class);
 
 Route::get('/', function () {
     return view('cart',[
         'products' => App\Product::all()
     ]);
 });
-
-/*Route::post('/', function () {
-    $query = request()->search; // <-- Change the query for testing.
-
-    $products = App\Product::search($query)->get();
-
-    return view('cart', compact('products'));
-});*/
