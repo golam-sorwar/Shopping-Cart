@@ -226,11 +226,23 @@ affected), and there is nothing we can do about that, due to platform
 restrictions on integers.
 
 For acceptable performance, we highly recommend Windows users to version 1.0.6
-of the libsodium extension from PECL or. Alternatively, simply upgrade to PHP 7
+of the libsodium extension from PECL or, alternatively, simply upgrade to PHP 7
 and the slowdown will be greatly reduced.
 
 This is also true of non-Windows 32-bit operating systems, or if somehow PHP
 was compiled where `PHP_INT_SIZE` equals `4` instead of `8` (i.e. Linux on i386).
+
+## Documentation
+
+First, you'll want to read the [Libsodium Quick Reference](https://paragonie.com/blog/2017/06/libsodium-quick-reference-quick-comparison-similar-functions-and-which-one-use).
+It aims to answer, "Which function should I use for [common problem]?".
+
+If you don't find the answers in the Quick Reference page, check out
+[*Using Libsodium in PHP Projects*](https://paragonie.com/book/pecl-libsodium).
+
+Finally, the [official libsodium documentation](https://download.libsodium.org/doc/) 
+(which was written for the C library, not the PHP library) also contains a lot of
+insightful technical information you may find helpful.
 
 ## API Coverage
 
@@ -323,8 +335,7 @@ was compiled where `PHP_INT_SIZE` equals `4` instead of `8` (i.e. Linux on i386)
   `ParagonIE_Sodium_Compat::crypto_pwhash_is_available()`, which returns a
    boolean value (`TRUE` or `FALSE`).
 
-
-### PHPCompatibility Rulset
+### PHPCompatibility Ruleset
 
 For sodium_compat users and that utilize [`PHPCompatibility`](https://github.com/PHPCompatibility/PHPCompatibility)
 in their CI process, there is now a custom ruleset available which can be used
